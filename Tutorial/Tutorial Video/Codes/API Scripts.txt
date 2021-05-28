@@ -1,0 +1,15 @@
+Module Variable: 
+
+EasyExploits.Module module = new EasyExploits.Module();
+
+--------------
+
+Attach:
+
+module.LaunchExploit();
+
+--------------
+
+Execute:
+
+module.ExecuteScript(fastColoredTextBox1.Text);

@@ -1,0 +1,9 @@
+Close: 
+
+Application.Exit();
+
+---------------------
+
+Minimize:
+
+WindowState = FormWindowState.Minimized;

@@ -1,0 +1,6 @@
+OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                openFileDialog1.Title = "Open";
+                fastColoredTextBox1.Text = File.ReadAllText(openFileDialog1.FileName);
+            }

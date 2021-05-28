@@ -1,0 +1,22 @@
+List Box:
+
+fastColoredTextBox1.Text = File.ReadAllText($"./Scripts/{listBox1.SelectedItem}");
+ 
+Refresh:
+ 
+listBox1.Items.Clear();//Clear Items in the LuaScriptList
+            Functions.PopulateListBox(listBox1, "./Scripts", "*.txt");
+            Functions.PopulateListBox(listBox1, "./Scripts", "*.lua");
+ 
+ 
+Functions:
+ 
+public static void PopulateListBox(ListBox lsb, string Folder, string FileType)
+        {
+            DirectoryInfo dinfo = new DirectoryInfo(Folder);
+            FileInfo[] Files = dinfo.GetFiles(FileType);
+            foreach (FileInfo file in Files)
+            {
+                lsb.Items.Add(file.Name);
+            }
+        }
